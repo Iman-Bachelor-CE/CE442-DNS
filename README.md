@@ -1,9 +1,9 @@
-# CE{Code of Course}-{Short Name of Course}
-Solutions to Prof. {Name of Prof}'s CE{Code of Course}: {Full Name of Course} ({Name of Uni} - {Semester} {Year}) Assignments
+# CE442-DNS
+Solutions to Dr. Amini & Dr Kharrazi's CE442-DNS: Data and Network Security (Sharif University of Technology - Fall 2024) Assignments
 
 ## Overview
 
-This repository contains solutions to the assignments for the CE{Code of Course}: {Full Name of Course} course at the {Name of Uni}, {Semester} {Year}, taught by Prof. {Name of Prof}.
+This repository contains solutions to the assignments for the CE442: Data and Network Security course at the Sharif University of Technology, Fall 2024, taught by Dr. Amini & Dr Kharrazi.
 
 ## Table of Contents
 
