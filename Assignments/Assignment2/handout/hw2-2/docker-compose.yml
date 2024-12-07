@@ -1,0 +1,32 @@
+services:
+  webium_main:
+    image: webium_main
+    restart: on-failure
+    build:
+      context: ./main_page
+      args:
+        - TASK_NAME=${TASK_NAME}
+        - FLASK_SECRET=${FLASK_SECRET}
+    ports:
+      - "5001:5001"
+    networks:
+      - webium-network
+
+  webium_target:
+    image: webium_target
+    restart: on-failure
+    build:
+      context: ./target_page
+      args:
+        - TASK_NAME=${TASK_NAME}
+        - FLAG=${FLAG}
+    ports:
+      - "5002:5002"
+    networks:
+      - webium-network
+    env_file:
+      - .env
+
+networks:
+  webium-network:
+    driver: bridge

