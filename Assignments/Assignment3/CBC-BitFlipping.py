@@ -25,7 +25,18 @@ print("Current Message is: " + msg)
 print("Encryption of Message in hex: ", end=" ")
 print((iv + encrypt_data(msg)).hex())
 
-enc_msg = input("Give me Encrypted msg in hex: ")
+
+
+#enc_msg = input("Give me Encrypted msg in hex: ")
+
+def flip_bit_and_hex(cipher_data, bit_position):
+    cipher_list = list(cipher_data)
+    cipher_list[bit_position] ^= 1
+    return bytes(cipher_list).hex()
+
+encrypted_data = iv + encrypt_data(msg)
+enc_msg = flip_bit_and_hex(encrypted_data, 6)
+
 try:
     final_dec_msg = decrypt_data(enc_msg)
     print(final_dec_msg)
@@ -41,4 +52,4 @@ except:
 # Current Message i s : crypto0
 # Encryption of Message in hex :
 #(NOTE : The iv and key values ​​are random, so the output will change each time.)	ee6d003abe8021f417b06281d3e5489598a22c1d3f86aa9b8fca69dc232a919f
-# Give me Encrypted msg in hex :
+# Give me Encrypted msg in hex :
