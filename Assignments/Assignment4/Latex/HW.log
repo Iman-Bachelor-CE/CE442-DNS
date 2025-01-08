@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  8 JAN 2025 20:52
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  8 JAN 2025 23:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1117,19 +1117,26 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/it' will be
 (Font)              scaled to size 8.0pt on input line 21.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/it' will be
 (Font)              scaled to size 6.0pt on input line 21.
-) [2] (q3.tex) [3] (q4.tex) [4] (HW.aux)
+ [2] [3]
+Overfull \hbox (3.50414pt too wide) in paragraph at lines 165--170
+[]\TU/XBNiloofar(0)/m/n/12 حمله []\TU/lmroman10-regular(0)/m/n/12 CRIME (Compre
+ssion Ratio Info-leak Made Easy)[] \TU/XBNiloofar(0)/m/n/12 یک حمله جانبی []\TU
+/lmroman10-regular(0)/m/n/12 (side-channel attack)[][]
+ []
+
+[4] [5]) [6] (q3.tex) [7] (q4.tex) [8] (HW.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12464 strings out of 409722
- 250262 string characters out of 5780279
- 1929164 words of memory out of 5000000
- 34153 multiletter control sequences out of 15000+600000
- 566314 words of font info for 110 fonts, out of 8000000 for 9000
+ 12472 strings out of 409722
+ 250559 string characters out of 5780279
+ 1930164 words of memory out of 5000000
+ 34159 multiletter control sequences out of 15000+600000
+ 566330 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 86i,11n,99p,2401b,331s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,11n,99p,2401b,386s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (4 pages).
+Output written on HW.pdf (8 pages).
