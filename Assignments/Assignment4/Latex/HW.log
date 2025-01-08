@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  8 JAN 2025 23:47
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  9 JAN 2025 00:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1084,59 +1084,58 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 1.
-) [1
-
-] (q2.tex
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 9.
+(Font)              scaled to size 12.0pt on input line 7.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 21.
+(Font)              scaled to size 8.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 21.
+(Font)              scaled to size 6.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/bx/n' in size <12> not availab
 le
 (Font)              Font shape `TU/XBNiloofar(1)/b/n' tried instead on input li
-ne 21.
+ne 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 21.
+(Font)              scaled to size 12.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/bx/n' in size <8> not availabl
 e
 (Font)              Font shape `TU/XBNiloofar(1)/b/n' tried instead on input li
-ne 21.
+ne 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 21.
+(Font)              scaled to size 8.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/bx/n' in size <6> not availabl
 e
 (Font)              Font shape `TU/XBNiloofar(1)/b/n' tried instead on input li
-ne 21.
+ne 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/b/n' will be
-(Font)              scaled to size 6.0pt on input line 21.
+(Font)              scaled to size 6.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 21.
+(Font)              scaled to size 12.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/it' will be
-(Font)              scaled to size 8.0pt on input line 21.
+(Font)              scaled to size 8.0pt on input line 34.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(1)/m/it' will be
-(Font)              scaled to size 6.0pt on input line 21.
- [2] [3]
+(Font)              scaled to size 6.0pt on input line 34.
+ [1
+
+] [2] [3] [4] [5] [6]) [7] (q2.tex [8] [9]
 Overfull \hbox (3.50414pt too wide) in paragraph at lines 165--170
 []\TU/XBNiloofar(0)/m/n/12 حمله []\TU/lmroman10-regular(0)/m/n/12 CRIME (Compre
 ssion Ratio Info-leak Made Easy)[] \TU/XBNiloofar(0)/m/n/12 یک حمله جانبی []\TU
 /lmroman10-regular(0)/m/n/12 (side-channel attack)[][]
  []
 
-[4] [5]) [6] (q3.tex) [7] (q4.tex) [8] (HW.aux)
+[10] [11]) [12] (q3.tex) [13] (q4.tex) [14] (HW.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12472 strings out of 409722
- 250559 string characters out of 5780279
+ 12478 strings out of 409722
+ 250729 string characters out of 5780279
  1930164 words of memory out of 5000000
- 34159 multiletter control sequences out of 15000+600000
+ 34165 multiletter control sequences out of 15000+600000
  566330 words of font info for 112 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 86i,11n,99p,2401b,386s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 86i,11n,99p,2401b,390s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (8 pages).
+Output written on HW.pdf (14 pages).
