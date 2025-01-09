@@ -1,0 +1,14 @@
+#!/usr/sbin/nft -f
+
+table ip nat {
+
+    chain prerouting {
+        type nat hook prerouting priority -100; policy accept;
+        ip daddr 127.0.0.1 tcp dport 8000 dnat to 127.0.0.1:8001
+    }
+
+    chain output {
+        type nat hook output priority -100; policy accept;
+        ip daddr 127.0.0.1 tcp dport 8000 dnat to 127.0.0.1:8001
+    }
+}
