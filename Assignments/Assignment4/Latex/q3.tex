@@ -8,9 +8,75 @@
 
 اما در nftables ، تمامی تغییرات پیشنهادی ابتدا به صورت یک مجموعه در حافظه آماده می‌شوند و سپس در یک مرحله به طور کامل و یکجا بر روی سیستم اعمال می‌شوند. اگر به هر دلیلی این فرآیند با خطا مواجه شود، هیچ تغییری در قوانین فعلی دیواره آتش رخ نمی‌دهد و سیستم به حالت پایدار قبلی باقی می‌ماند.
 
+جالا در این بخش این کامند را ابتدا ران می‌کنیم:
+
+\lr{nc -l -k 127.0.0.1 8001}
+
+سرور آماده‌ی دریافت می‌شود.
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=0.7\textwidth]{pic17.jpg}
 	\caption{سرور آماده‌ی دریافت}
+	\label{fig:label4}
+\end{figure}
+
+حالا در ادامه فایل
+\lr{rules.nft}
+را ایجاد می‌کنیم و قوانین مربوطه را در آن می‌نویسیم.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic18.jpg}
+	\caption{فایل \lr{rules.nft}}
+	\label{fig:label4}
+\end{figure}
+
+در این اسکریپت، یک جدول برای فیلتر کردن ترافیک در محیط شبکه تعریف شده است. جدول با نام \texttt{filter} و در دامنه \texttt{inet} تعریف شده و شامل سه زنجیره می‌شود:
+
+\begin{itemize}
+	\item \textbf{زنجیره ورودی (input):}
+	\begin{itemize}
+		\item ترافیک ورودی بر اساس چندین قاعده مورد پذیرش قرار می‌گیرد.
+		\item ترافیک از رابط \texttt{lo} (لوکال) بدون شرط پذیرفته می‌شود.
+		\item ترافیکی که حالت آن \texttt{related} یا \texttt{established} است نیز پذیرفته می‌شود.
+		\item ترافیک TCP با پورت‌های مقصد 8000 و 8001 پذیرفته می‌شود.
+	\end{itemize}
+	
+	\item \textbf{زنجیره خروجی (output):}
+	\begin{itemize}
+		\item تمام ترافیک خروجی به طور پیش‌فرض پذیرفته می‌شود.
+	\end{itemize}
+	
+	\item \textbf{زنجیره فوروارد (forward):}
+	\begin{itemize}
+		\item تمام ترافیک فوروارد به طور پیش‌فرض پذیرفته می‌شود.
+	\end{itemize}
+\end{itemize}
+
+این قوانین برای ساده‌سازی مدیریت ترافیک شبکه و اطمینان از دسترسی بدون مانع به منابع محلی ضروری هستند.
+
+حالا این فایل را به عنوان ورودی به دستور nft می‌دهیم:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic19.jpg}
+	\caption{ورودی دادن فایل}
+	\label{fig:label4}
+\end{figure}
+
+حالا ارتباط برقرار است و پیام‌های مدنظرمان را وارد می‌کنیم.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic20.jpg}
+	\caption{تصویر سمت کارخواه}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic21.jpg}
+	\caption{تصویر سمت کارساز}
 	\label{fig:label4}
 \end{figure}

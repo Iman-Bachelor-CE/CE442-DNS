@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  9 JAN 2025 19:41
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  9 JAN 2025 19:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -954,6 +954,15 @@ LaTeX Warning: Label `fig:label4' multiply defined.
 
 LaTeX Warning: Label `fig:label4' multiply defined.
 
+
+LaTeX Warning: Label `fig:label4' multiply defined.
+
+
+LaTeX Warning: Label `fig:label4' multiply defined.
+
+
+LaTeX Warning: Label `fig:label4' multiply defined.
+
 )
 \openout1 = `HW.aux'.
 
@@ -1172,7 +1181,17 @@ ssion Ratio Info-leak Made Easy)[] \TU/XBNiloofar(0)/m/n/12 یک حمله جان
 [10] [11]) [12] (q3.tex
 File: pic17.jpg Graphic file (type bmp)
 <pic17.jpg>
-) [13] (q4.tex
+File: pic18.jpg Graphic file (type bmp)
+<pic18.jpg>
+ [13]
+File: pic19.jpg Graphic file (type bmp)
+<pic19.jpg>
+File: pic20.jpg Graphic file (type bmp)
+<pic20.jpg>
+ [14]
+File: pic21.jpg Graphic file (type bmp)
+<pic21.jpg>
+) [15] (q4.tex
 File: pic1.jpg Graphic file (type bmp)
 <pic1.jpg>
 File: pic2.jpg Graphic file (type bmp)
@@ -1181,7 +1200,7 @@ File: pic3.jpg Graphic file (type bmp)
 <pic3.jpg>
 File: pic4.jpg Graphic file (type bmp)
 <pic4.jpg>
- [14]
+ [16]
 File: pic5.jpg Graphic file (type bmp)
 <pic5.jpg>
 File: pic6.jpg Graphic file (type bmp)
@@ -1190,7 +1209,7 @@ File: pic7.jpg Graphic file (type bmp)
 <pic7.jpg>
 File: pic8.jpg Graphic file (type bmp)
 <pic8.jpg>
- [15]
+ [17]
 File: pic9.jpg Graphic file (type bmp)
 <pic9.jpg>
 File: pic10.jpg Graphic file (type bmp)
@@ -1199,17 +1218,18 @@ File: pic11.jpg Graphic file (type bmp)
 <pic11.jpg>
 File: pic12.jpg Graphic file (type bmp)
 <pic12.jpg>
- [16]
+ [18]
 File: pic13.jpg Graphic file (type bmp)
 <pic13.jpg>
 File: pic14.jpg Graphic file (type bmp)
 <pic14.jpg>
 File: pic15.jpg Graphic file (type bmp)
 <pic15.jpg>
- [17]
+ [19]
 File: pic16.jpg Graphic file (type bmp)
 <pic16.jpg>
-) [18] (HW.aux)
+) [20]
+(HW.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
@@ -1220,12 +1240,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 12637 strings out of 409722
- 252938 string characters out of 5780279
+ 12677 strings out of 409722
+ 253515 string characters out of 5780279
  1930164 words of memory out of 5000000
- 34306 multiletter control sequences out of 15000+600000
- 566330 words of font info for 112 fonts, out of 8000000 for 9000
+ 34340 multiletter control sequences out of 15000+600000
+ 566338 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  86i,11n,99p,2401b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (18 pages).
+Output written on HW.pdf (20 pages).
