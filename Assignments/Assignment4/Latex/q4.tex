@@ -1,2 +1,75 @@
 \section*{جواب سوال ۴}
 
+\subsection*{ترافیک \lr{HTTP}}
+
+برای این بخش، در ابتدا این فیلتر را در وایرشارک اعمال می‌کنیم:
+
+\lr{http \&\& ip.src == 192.168.0.100}
+
+خروجی وایرشارک بدین شکل می‌شود:
+
+
+
+حالا ۳ تا از دامنه‌های بدست آمده این موارد هستند:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic1.jpg}
+	\caption{خروجی Wireshark}
+	\label{fig:label4}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic2.jpg}
+	\caption{دامنه: \lr{www.amazon.com} , آیپی: \lr{205.251.242.54}}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic3.jpg}
+	\caption{دامنه: \lr{ad.adlegend.com} , آیپی: \lr{74.217.34.2}}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic4.jpg}
+	\caption{دامنه: \lr{ad.doubleclick.net} , آیپی: \lr{74.125.225.91}}
+	\label{fig:label4}
+\end{figure}
+
+حالا در این بخش از ۲ کوئری استفاده می‌کنیم.
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic5.jpg}
+	\caption{خروجی کوئری \lr{http \&\& ip.src == 192.168.0.100 \&\& http.request.uri contains "/search?"}}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic6.jpg}
+	\caption{}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic7.jpg}
+	\caption{خروجی کوئری \lr{http \&\& ip.src == 192.168.0.100 \&\& http.request.uri contains "/search"}}
+	\label{fig:label4}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pic8.jpg}
+	\caption{}
+	\label{fig:label4}
+\end{figure}
+
+\subsection*{ترافیک \lr{FTP}}
