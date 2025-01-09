@@ -116,3 +116,54 @@
 	\caption{پیام‌های دریافتی در یک پورت دیگر}
 	\label{fig:label4}
 \end{figure}
+
+و اما تفاوت بین دیواره‌های آتش حالت‌دار و بی‌حالت،
+
+دیواره آتش حالت‌دار \lr{(Stateful-Firewall)} : این نوع دیواره آتش با پیگیری وضعیت اتصال‌ها (مانند اتصال‌های جدید، موجود یا بسته‌شده) به کمک اطلاعات وضعیت (مانند \lr{conntrack} ) می‌تواند ترافیک را بر اساس ارتباطات جاری مدیریت کند. این توانایی باعث می‌شود تصمیم‌گیری درباره اجازه یا رد ترافیک دقیق‌تر باشد.
+
+دیواره آتش بی‌حالت \lr{(Stateless-Firewall)} : این نوع دیواره آتش بسته‌ها را به صورت جداگانه و بدون توجه به وضعیت اتصال پردازش می‌کند. این مدل ساده‌تر است ولی برای سناریوهای پیچیده مدیریت ترافیک، مانند
+\lr{Port Knocking}
+یا ارتباطات وابسته به وضعیت، مناسب نیست.
+ 
+حالا برای پیکربندی دیواره آتش با استفاده از nftables و پیاده‌سازی \lr{Port Knocking} برای باز کردن درگاه SSH ، ابتدا قوانین \lr{server_firewall} را می‌نویسیم و سپس بسته‌هایی به درگاه‌های ۱۳۳۷ و ۱۳۳۸ می‌فرستیم تا تست کنیم.
+ 
+ قوانین نوشته شده به شرح زیر هستند:
+ 
+ \begin{figure}[H]
+ 	\centering
+ 	\includegraphics[width=0.7\textwidth]{pic26.jpg}
+ 	\caption{قوانین \lr{server_firewall}}
+ 	\label{fig:label4}
+ \end{figure}
+ 
+\subsection*{توضیح قوانین}
+ 
+\subsubsection*{جدول \lr{inet server_firewall}:}
+ 
+ این جدول برای مدیریت فیلتر ترافیک استفاده می‌شود.
+ 
+\subsubsection*{زنجیره \lr{input}:}
+ 
+\begin{itemize}
+	\item \lr{policy drop}: به صورت پیش‌فرض تمامی ترافیک‌های ورودی رد می‌شوند.
+	\item \lr{iif lo accept}: ترافیک مربوط به \lr{loopback (lo)} مجاز است.
+	\item \lr{ct state related, established accept}: بسته‌های مربوط به ارتباطات موجود یا ارتباطات قبلی مجاز هستند.
+	\item \lr{tcp dport \{80, 443\} accept}: دسترسی به درگاه‌های 80 و 443 برای خدمات وب باز است.
+	\item \lr{ct state invalid drop}: بسته‌هایی که وضعیت نامعتبر دارند رد می‌شوند.
+	\item \lr{tcp dport 1337 mark set 0x1}: در صورت دریافت بسته به درگاه 1337، \lr{mark} مقدار \lr{0x1} می‌گیرد.
+	\item \lr{tcp dport 1338 mark set 0x2 meta mark and 0x3 == 0x3 accept}: پس از دریافت بسته به درگاه 1338، اگر \lr{mark} قبلی مقدار \lr{0x1} داشته باشد (مطابق شرط \lr{meta mark and 0x3 == 0x3})، اجازه دسترسی به پورت داده می‌شود.
+	\item \lr{tcp dport 22 meta mark and 0x3 == 0x3 accept}: دسترسی به پورت 22 (\lr{SSH}) تنها در صورت صحیح بودن \lr{mark} باز می‌شود.
+	\item \lr{drop}: سایر ترافیک‌ها رد می‌شوند.
+\end{itemize}
+ 
+\subsubsection*{زنجیره \lr{forward}:}
+ 
+\begin{itemize}
+	\item تمامی ترافیک‌های عبوری رد می‌شوند.
+\end{itemize}
+ 
+\subsubsection*{زنجیره \lr{output}:}
+ 
+\begin{itemize}
+	\item تمامی ترافیک‌های خروجی مجاز هستند.
+\end{itemize}

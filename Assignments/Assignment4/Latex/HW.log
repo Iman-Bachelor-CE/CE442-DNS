@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  9 JAN 2025 20:45
+This is XeTeX, Version 3.141592653-2.6-0.999995 (MiKTeX 23.10.12) (preloaded format=xelatex 2023.11.6)  10 JAN 2025 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1220,7 +1220,7 @@ File: pic24.jpg Graphic file (type bmp)
 <pic24.jpg>
 File: pic25.jpg Graphic file (type bmp)
 <pic25.jpg>
-) [15] [16] (q4.tex
+ [15] [16]) [17] (q4.tex
 File: pic1.jpg Graphic file (type bmp)
 <pic1.jpg>
 File: pic2.jpg Graphic file (type bmp)
@@ -1229,7 +1229,7 @@ File: pic3.jpg Graphic file (type bmp)
 <pic3.jpg>
 File: pic4.jpg Graphic file (type bmp)
 <pic4.jpg>
- [17]
+ [18]
 File: pic5.jpg Graphic file (type bmp)
 <pic5.jpg>
 File: pic6.jpg Graphic file (type bmp)
@@ -1238,7 +1238,7 @@ File: pic7.jpg Graphic file (type bmp)
 <pic7.jpg>
 File: pic8.jpg Graphic file (type bmp)
 <pic8.jpg>
- [18]
+ [19]
 File: pic9.jpg Graphic file (type bmp)
 <pic9.jpg>
 File: pic10.jpg Graphic file (type bmp)
@@ -1247,17 +1247,17 @@ File: pic11.jpg Graphic file (type bmp)
 <pic11.jpg>
 File: pic12.jpg Graphic file (type bmp)
 <pic12.jpg>
- [19]
+ [20]
 File: pic13.jpg Graphic file (type bmp)
 <pic13.jpg>
 File: pic14.jpg Graphic file (type bmp)
 <pic14.jpg>
 File: pic15.jpg Graphic file (type bmp)
 <pic15.jpg>
- [20]
+ [21]
 File: pic16.jpg Graphic file (type bmp)
 <pic16.jpg>
-) [21] (HW.aux)
+) [22] (HW.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2023-11-01>
@@ -1276,4 +1276,4 @@ Here is how much of TeX's memory you used:
  1348 hyphenation exceptions out of 8191
  86i,11n,99p,2401b,417s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on HW.pdf (21 pages).
+Output written on HW.pdf (22 pages).
