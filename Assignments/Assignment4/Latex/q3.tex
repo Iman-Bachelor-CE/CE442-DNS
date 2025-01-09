@@ -150,9 +150,12 @@
 	\item \lr{ct state related, established accept}: بسته‌های مربوط به ارتباطات موجود یا ارتباطات قبلی مجاز هستند.
 	\item \lr{tcp dport \{80, 443\} accept}: دسترسی به درگاه‌های 80 و 443 برای خدمات وب باز است.
 	\item \lr{ct state invalid drop}: بسته‌هایی که وضعیت نامعتبر دارند رد می‌شوند.
-	\item \lr{tcp dport 1337 mark set 0x1}: در صورت دریافت بسته به درگاه 1337، \lr{mark} مقدار \lr{0x1} می‌گیرد.
-	\item \lr{tcp dport 1338 mark set 0x2 meta mark and 0x3 == 0x3 accept}: پس از دریافت بسته به درگاه 1338، اگر \lr{mark} قبلی مقدار \lr{0x1} داشته باشد (مطابق شرط \lr{meta mark and 0x3 == 0x3})، اجازه دسترسی به پورت داده می‌شود.
-	\item \lr{tcp dport 22 meta mark and 0x3 == 0x3 accept}: دسترسی به پورت 22 (\lr{SSH}) تنها در صورت صحیح بودن \lr{mark} باز می‌شود.
+	\item \lr{tcp dport 1337 mark set 0x1}:
+	 در صورت دریافت بسته به درگاه 1337، \lr{mark} مقدار \lr{0x1} می‌گیرد.
+	\item \lr{tcp dport 1338 mark set 0x2;}:
+	 پس از دریافت بسته به درگاه 1338، \lr{mark} مقدار \lr{0x2} تنظیم می‌کند.
+	\item \lr{meta mark \& 0x3 == 0x3 tcp dport 22 accept;}:
+	 دسترسی به پورت 22 (\lr{SSH}) تنها زمانی مجاز است که \lr{mark} برابر با \lr{0x3} باشد.
 	\item \lr{drop}: سایر ترافیک‌ها رد می‌شوند.
 \end{itemize}
  
@@ -167,3 +170,23 @@
 \begin{itemize}
 	\item تمامی ترافیک‌های خروجی مجاز هستند.
 \end{itemize}
+
+\subsubsection*{جدول \lr{ip nat}:}
+
+\textbf{زنجیره \lr{prerouting} و \lr{postrouting}:}
+
+این زنجیره‌ها برای تنظیم قوانین \lr{NAT} در صورت نیاز استفاده می‌شوند. در این مثال، قوانین خاصی برای \lr{NAT} تعریف نشده‌اند، اما ساختار پایه‌ای آن‌ها فراهم شده است.
+
+در ادامه نیز کافی‌ست با کامندهای
+
+\lr{nc -z -v 127.0.0.1 1337}
+
+و
+
+\lr{nc -z -v 127.0.0.1 1338}
+
+بسته به پورت‌های ۱۳۳۷ و ۱۳۳۸ ارسال کنیم و با کامند
+
+\lr{ssh user@65.109.199.84}
+
+اتصال ssh را برقرار می‌کنم در سرور خودم.

@@ -1,16 +1,23 @@
-#!/usr/sbin/nft -f
-
 table inet server_firewall {
     chain input {
         type filter hook input priority 0; policy drop;
-        iif lo accept
-        ct state related,established accept
-        tcp dport {80, 443} accept
-        ct state invalid drop
-        tcp dport 1337 mark set 0x1
-        tcp dport 1338 mark set 0x2 meta mark and 0x3 == 0x3 accept
-        tcp dport 22 meta mark and 0x3 == 0x3 accept
-        drop
+
+        iif "lo" accept;
+
+        ct state established,related accept;
+
+        tcp dport {80, 443} accept;
+
+        ct state invalid drop;
+
+        tcp dport 1337 counter mark set 0x1 accept;
+
+        tcp dport 1338 meta mark 0x1 mark set 0x3 accept;
+
+        tcp dport 22 meta mark 0x3 accept;
+
+        log prefix "Firewall Input: " flags all;
+        drop;
     }
 
     chain forward {
