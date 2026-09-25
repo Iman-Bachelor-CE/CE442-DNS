@@ -1,5 +1,5 @@
 # CE442-DNS
-Solutions to Dr. Amini & Dr Kharrazi's CE442-DNS: Data and Network Security (Sharif University of Technology - Fall 2024) Assignments
+Solutions to Dr. Amini & Dr. Kharrazi's CE442: Data and Network Security (Sharif University of Technology - Fall 2024) Assignments
 
 ## Overview
 
